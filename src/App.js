@@ -56,6 +56,9 @@ const App = () => {
         inputPokemon={inputPokemon} 
         setInputPokemon={setInputPokemon} 
       />
+                    {inputPokemon !== '' ?
+                null
+                 : <p>Pokemon search results will appear here</p>}
       {searching && <p>Searching...</p>}
       {searchErrors ? <p>Not found!</p> : null}
       <Pokemon
