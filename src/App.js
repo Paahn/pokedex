@@ -14,8 +14,10 @@ const App = () => {
     await fetch(url)
     .then ((response) => response.json())
     .then ((data) => {
-      console.log(data);
-      setPokemon(data);
+      if (data.name) {
+        console.log(data);
+        setPokemon(data);
+      }
     })
   };
 
