@@ -19,7 +19,7 @@ const Pokemon = ({ pokemon }) => {
         `}
         >
             <div>
-              <img src={pokemon.sprites.front_default}></img>
+              <img src={pokemon.sprites.front_default} alt='default-sprite'></img>
               <p>name: {pokemon.name}</p>
               <p>height: {pokemon.height}</p>
               <p>weight: {pokemon.weight}</p>
