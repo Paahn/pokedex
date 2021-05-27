@@ -12,7 +12,7 @@ const App = () => {
   const [searchErrors, setSearchErrors] = useState(false);
 
   const getPokemon = async () => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}`;
+    const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon.toLowerCase()}`;
 
     await fetch(url)
     .then ((response) => response.json())
