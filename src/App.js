@@ -8,6 +8,7 @@ import useDebounce from './utils/debounceHook';
 const App = () => {
   const [pokemon, setPokemon] = useState({});
   const [inputPokemon, setInputPokemon] = useState('');
+  const [searching, setSearching] = useState(false);
 
   const getPokemon = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}`;
@@ -16,9 +17,13 @@ const App = () => {
     .then ((response) => response.json())
     .then ((data) => {
       if (data.name) {
+        setSearching(false);
         console.log(data);
         setPokemon(data);
       }
+    }).catch((error) => {
+      setSearching(false);
+      console.log(error);
     })
   };
 
@@ -26,8 +31,10 @@ const App = () => {
 
   useEffect(() => {
     if (debouncedSearchPokemon){
+      setSearching(true);
       getPokemon();
     } else {
+      setSearching(false);
       setPokemon({});
     }
   }, [debouncedSearchPokemon]);
@@ -43,8 +50,9 @@ const App = () => {
         inputPokemon={inputPokemon} 
         setInputPokemon={setInputPokemon} 
       />
+      {searching && <p>Searching...</p>}
       <Pokemon
-        pokemon={pokemon} 
+        pokemon={pokemon}
       />
     </div>
   );
