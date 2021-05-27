@@ -8,8 +8,8 @@ const App = () => {
   const [pokemon, setPokemon] = useState({});
   const [inputPokemon, setInputPokemon] = useState('');
 
-  const getPokemon = async () => {
-    const url = "https://pokeapi.co/api/v2/pokemon/kabutops";
+  const getPokemon = async (inputPokemon) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}`;
 
     await fetch(url)
     .then ((response) => response.json())
@@ -20,8 +20,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    getPokemon();
-  }, []);
+    getPokemon(inputPokemon);
+  }, [inputPokemon]);
 
   return (
     <div className={css`
