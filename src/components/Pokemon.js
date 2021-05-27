@@ -1,21 +1,19 @@
 import React from 'react';
 import { css } from '@emotion/css';
+import getColour from '../utils/getColour';
 
 const Pokemon = ({ pokemon }) => {
-  
     return (
         <div className={css`
             margin: auto;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: 100%;
         `}
         >
-            <div>
               {
                pokemon.sprites && 
-               <div> 
+               <div className={css`
+                  background-color: ${getColour(pokemon.types[0])};
+               `}> 
                   <img src={pokemon.sprites.front_default} alt='default-sprite'></img>
                   <p>name: {pokemon.name}</p>
                   <p>height: {pokemon.height}</p>
@@ -34,7 +32,6 @@ const Pokemon = ({ pokemon }) => {
                   </div>
               </div>
               }
-            </div>
         </div>
     )
 }
