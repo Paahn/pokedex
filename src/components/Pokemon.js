@@ -2,6 +2,13 @@ import React from 'react';
 import { css } from '@emotion/css';
 
 const Pokemon = ({ pokemon }) => {
+  if(pokemon.sprites == undefined){
+    return(
+      <div>
+          Loading...
+      </div>
+    );
+}
     return (
         <div className={css`
             margin: auto;
