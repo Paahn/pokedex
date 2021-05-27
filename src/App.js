@@ -5,6 +5,7 @@ import Pokemon from './components/Pokemon';
 
 const App = () => {
   const [pokemon, setPokemon] = useState({});
+  const [inputPokemon, setInputPokemon] = useState('');
 
   const getPokemon = async () => {
     const url = "https://pokeapi.co/api/v2/pokemon/kabutops";
