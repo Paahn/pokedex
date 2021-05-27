@@ -1,9 +1,16 @@
 import React from 'react'
 
-const Search = (props) => {
+const Search = ({ inputPokemon, setInputPokemon }) => {
+    const searchPokemon = (event) => {
+        setInputPokemon(event.target.value);
+    }
     return (
         <div>
-            <input placeholder="Search Pokemon"></input>
+            <input
+             value={inputPokemon}
+             onChange={searchPokemon}
+             placeholder="Search Pokemon"
+            ></input>
         </div>
     )
 }
