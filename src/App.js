@@ -9,6 +9,7 @@ const App = () => {
   const [pokemon, setPokemon] = useState({});
   const [inputPokemon, setInputPokemon] = useState('');
   const [searching, setSearching] = useState(false);
+  const [searchErrors, setSearchErrors] = useState(false);
 
   const getPokemon = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}`;
@@ -18,11 +19,13 @@ const App = () => {
     .then ((data) => {
       if (data.name) {
         setSearching(false);
+        setSearchErrors(false);
         console.log(data);
         setPokemon(data);
       }
     }).catch((error) => {
       setSearching(false);
+      setSearchErrors(true);
       console.log(error);
       setPokemon({});
     })
@@ -33,9 +36,11 @@ const App = () => {
   useEffect(() => {
     if (debouncedSearchPokemon){
       setSearching(true);
+      setSearchErrors(false);
       getPokemon();
     } else {
       setSearching(false);
+      setSearchErrors(false);
       setPokemon({});
     }
   }, [debouncedSearchPokemon]);
@@ -52,6 +57,7 @@ const App = () => {
         setInputPokemon={setInputPokemon} 
       />
       {searching && <p>Searching...</p>}
+      {searchErrors ? <p>Not found!</p> : null}
       <Pokemon
         pokemon={pokemon}
       />
