@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/css';
 import Pokemon from './components/Pokemon';
 
@@ -30,6 +30,21 @@ const App = () => {
         "url": "https://pokeapi.co/api/v2/pokemon/6/"
     }
   ]);
+
+  const getPokemon = async () => {
+    const url = "https://pokeapi.co/api/v2/pokemon/bulbasaur";
+
+    await fetch(url)
+    .then ((response) => response.json())
+    .then ((data) => {
+      console.log(data);
+    })
+  };
+
+  useEffect(() => {
+    getPokemon();
+  }, []);
+
   return (
     <div className={css`
         margin: auto;
