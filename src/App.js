@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
+import Pokemon from './components/Pokemon';
 
 const App = () => {
   const [pokemon, setPokemon] = useState([
@@ -31,11 +32,7 @@ const App = () => {
   return (
     <div className="App">
       <h1>Pokedexter</h1>
-      {pokemon.map(pkm => 
-        <div>
-          {pkm.name}
-        </div>
-      )}
+      <Pokemon pokemon={pokemon} />
     </div>
   );
 }
