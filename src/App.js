@@ -32,8 +32,13 @@ const App = () => {
         text-align: center;
     `}>
       <h1>Pokedex</h1>
-      <Search inputPokemon={inputPokemon} setInputPokemon={setInputPokemon} />
-      <Pokemon pokemon={pokemon} />
+      <Search 
+        inputPokemon={inputPokemon} 
+        setInputPokemon={setInputPokemon} 
+      />
+      <Pokemon
+        pokemon={pokemon} 
+      />
     </div>
   );
 }
