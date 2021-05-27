@@ -1,8 +1,16 @@
 import React from 'react';
+import { css } from '@emotion/css';
 
 const Pokemon = ({ pokemon }) => {
     return (
-        <div>
+        <div className={css`
+            margin: auto;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        `}
+        >
             {pokemon.map(pkm => 
               <div>
                 <a href={pkm.url}>Find out more about {pkm.name}</a>
@@ -12,4 +20,4 @@ const Pokemon = ({ pokemon }) => {
     )
 }
 
-export default Pokemon
+export default Pokemon;

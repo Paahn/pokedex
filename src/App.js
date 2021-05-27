@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { css } from '@emotion/css';
 import Pokemon from './components/Pokemon';
+
 
 const App = () => {
   const [pokemon, setPokemon] = useState([
@@ -29,7 +31,11 @@ const App = () => {
     }
   ]);
   return (
-    <div className="App">
+    <div className={css`
+        margin: auto;
+        width: 50%;
+        text-align: center;
+    `}>
       <h1>Pokedexter</h1>
       <Pokemon pokemon={pokemon} />
     </div>
