@@ -24,6 +24,7 @@ const App = () => {
     }).catch((error) => {
       setSearching(false);
       console.log(error);
+      setPokemon({});
     })
   };
 
