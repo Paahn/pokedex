@@ -25,14 +25,14 @@ const Pokemon = ({ pokemon }) => {
               <p>weight: {pokemon.weight}</p>
               <p>base xp: {pokemon.base_experience}</p>
               {pokemon.abilities.map((ab) =>
-              <p>Ability: {ab.ability.name}</p>
+              <p key={ab.ability.name}>Ability: {ab.ability.name}</p>
               )}
               {pokemon.types.map((type) => 
-              <p>Type: {type.type.name}</p>
+              <p key={type.type.name}>Type: {type.type.name}</p>
               )}
               <div>
                 {pokemon.stats.map((stat) =>
-                <p>{stat.stat.name}: {stat.base_stat}</p>
+                <p key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</p>
                 )}
               </div>
             </div>
