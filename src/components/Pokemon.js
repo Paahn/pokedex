@@ -11,11 +11,24 @@ const Pokemon = ({ pokemon }) => {
             align-items: center;
         `}
         >
-            {pokemon.map(pkm => 
+            <div>
+              <img src={pokemon.sprites.front_default}></img>
+              <p>name: {pokemon.name}</p>
+              <p>height: {pokemon.height}</p>
+              <p>weight: {pokemon.weight}</p>
+              <p>base xp: {pokemon.base_experience}</p>
+              {pokemon.abilities.map((ab) =>
+              <p>Ability: {ab.ability.name}</p>
+              )}
+              {pokemon.types.map((type) => 
+              <p>Type: {type.type.name}</p>
+              )}
               <div>
-                <a href={pkm.url}>Find out more about {pkm.name}</a>
+                {pokemon.stats.map((stat) =>
+                <p>{stat.stat.name}: {stat.base_stat}</p>
+                )}
               </div>
-            )}
+            </div>
         </div>
     )
 }
