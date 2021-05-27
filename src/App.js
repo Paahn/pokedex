@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/css';
 import Pokemon from './components/Pokemon';
 import Search from './components/Search';
+import useDebounce from './utils/debounceHook';
 
 
 const App = () => {
   const [pokemon, setPokemon] = useState({});
   const [inputPokemon, setInputPokemon] = useState('');
 
-  const getPokemon = async (inputPokemon) => {
+  const getPokemon = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon}`;
 
     await fetch(url)
@@ -21,9 +22,15 @@ const App = () => {
     })
   };
 
+  const debouncedSearchPokemon = useDebounce(inputPokemon, 500);
+
   useEffect(() => {
-    getPokemon(inputPokemon);
-  }, [inputPokemon]);
+    if (debouncedSearchPokemon){
+      getPokemon();
+    } else {
+      setPokemon({});
+    }
+  }, [debouncedSearchPokemon]);
 
   return (
     <div className={css`
