@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { css } from '@emotion/css';
 import Pokemon from './components/Pokemon';
+import Search from './components/Search';
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         text-align: center;
     `}>
       <h1>Pokedex</h1>
+      <Search  />
       <Pokemon pokemon={pokemon} />
     </div>
   );
