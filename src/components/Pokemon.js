@@ -10,6 +10,16 @@ const Pokemon = ({ pokemon }) => {
     border-radius: 5px;
     padding: 3px;
     `;
+    const toggleImage = (e) => {
+      const altImg = e.target.getAttribute('alt');
+      if (altImg === 'default') {
+        e.target.setAttribute( 'src', `${pokemon.sprites.front_shiny}`);
+        e.target.setAttribute('alt', 'shiny');
+      } else {
+        e.target.setAttribute( 'src', `${pokemon.sprites.front_default}`);
+        e.target.setAttribute('alt', 'default');
+      }
+    }
     return (
         <div className={css`
             margin: auto;
@@ -32,12 +42,12 @@ const Pokemon = ({ pokemon }) => {
                `}> 
                   <div>
                   <img
+                    className={css`
+                      cursor: pointer;  
+                    `}
                     src={pokemon.sprites.front_default} 
-                    alt='default-sprite'>
-                    </img>
-                    <img
-                    src={pokemon.sprites.front_shiny} 
-                    alt='shiny-sprite'>
+                    alt='default'
+                    onClick={toggleImage}>
                     </img>
                     <p className={pStyle}>name: {pokemon.name}</p>
                     {pokemon.types.map((type) => 
