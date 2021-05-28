@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/css';
 import getColour from '../utils/getColour';
+import textColour from '../utils/textColour';
 
 const Pokemon = ({ pokemon }) => {
     const pStyle = css`
@@ -46,7 +47,12 @@ const Pokemon = ({ pokemon }) => {
                   </div>
                   <div>
                     {pokemon.stats.map((stat) =>
-                    <p className={pStyle} key={stat.stat.name}>{stat.stat.name}: {stat.base_stat}</p>
+                    <p className={pStyle} 
+                      key={stat.stat.name}>
+                      {stat.stat.name}: <strong className={css`
+                     color: ${textColour(stat.base_stat)};
+                   `}>{stat.base_stat}</strong>
+                    </p>
                     )}
                   </div>
               </div>
