@@ -33,7 +33,7 @@ const App = () => {
     })
   };
 
-  const debouncedSearchPokemon = useDebounce(inputPokemon, 700);
+  const debouncedSearchPokemon = useDebounce(inputPokemon, 1500);
 
   useEffect(() => {
     if (debouncedSearchPokemon){
