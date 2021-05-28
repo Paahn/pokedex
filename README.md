@@ -1,6 +1,8 @@
 # Pokedex
 live project https://pokedex-393e6.web.app
 
+Disclaimer: autocomplete functionality was implemented with the help of w3schools https://www.w3schools.com/howto/howto_js_autocomplete.asp
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
