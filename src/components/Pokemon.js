@@ -27,7 +27,8 @@ const Pokemon = ({ pokemon }) => {
                `}> 
                   <div>
                     <img className={css`
-                      
+                      background-color: #ffffff;
+                      border-radius: 5px;
                     `} 
                     src={pokemon.sprites.front_default} 
                     alt='default-sprite'>
