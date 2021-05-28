@@ -73,7 +73,7 @@ const App = () => {
         height: 80vh;
         font-family: "pokemon-font", monospace;
     `}>
-      <h1>Pokedex</h1>
+      <h1>Pokédex</h1>
       <Search 
         inputPokemon={inputPokemon} 
         setInputPokemon={setInputPokemon} 

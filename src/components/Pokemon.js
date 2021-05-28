@@ -35,7 +35,7 @@ const Pokemon = ({ pokemon }) => {
                     </img>
                     <p className={pStyle}>name: {pokemon.name}</p>
                     {pokemon.types.map((type) => 
-                      <p className={pStyle} key={type.type.name}>Type: {type.type.name}</p>
+                      <p className={pStyle} key={type.type.name}>type: {type.type.name}</p>
                     )}
                   </div>
                   <div>
@@ -43,7 +43,7 @@ const Pokemon = ({ pokemon }) => {
                     <p className={pStyle}>weight: {pokemon.weight}</p>
                     <p className={pStyle}>base xp: {pokemon.base_experience}</p>
                     {pokemon.abilities.map((ab) =>
-                    <p className={pStyle} key={ab.ability.name}>Ability: {ab.ability.name}</p>
+                    <p className={pStyle} key={ab.ability.name}>ability: {ab.ability.name}</p>
                     )}
                   </div>
                   <div>
