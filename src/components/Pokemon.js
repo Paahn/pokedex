@@ -31,12 +31,13 @@ const Pokemon = ({ pokemon }) => {
                   justify-content: space-around;
                `}> 
                   <div>
-                    <img className={css`
-                      background-color: #ffffff;
-                      border-radius: 5px;
-                    `} 
+                  <img
                     src={pokemon.sprites.front_default} 
                     alt='default-sprite'>
+                    </img>
+                    <img
+                    src={pokemon.sprites.front_shiny} 
+                    alt='shiny-sprite'>
                     </img>
                     <p className={pStyle}>name: {pokemon.name}</p>
                     {pokemon.types.map((type) => 
