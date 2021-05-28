@@ -48,7 +48,7 @@ const App = () => {
   return (
     <div className={css`
         margin: auto;
-        width: 50%;
+        width: 80%;
         text-align: center;
     `}>
       <h1>Pokedex</h1>
