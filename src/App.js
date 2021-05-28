@@ -67,13 +67,17 @@ const App = () => {
         margin: auto;
         width: 80%;
         text-align: center;
-        background-color: #ffb3b3;
+        background-color: #ff4d4d;
         padding: 50px;
         border-radius: 10px;
         height: 80vh;
         font-family: "pokemon-font", monospace;
     `}>
-      <h1>Pokédex</h1>
+      <h1 className={css`
+        font-size: 40px;
+      `}>
+      Pokédex
+      </h1>
       <Search 
         inputPokemon={inputPokemon} 
         setInputPokemon={setInputPokemon} 
