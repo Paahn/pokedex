@@ -67,6 +67,10 @@ const App = () => {
         margin: auto;
         width: 80%;
         text-align: center;
+        background-color: #ffb3b3;
+        padding: 50px;
+        border-radius: 10px;
+        height: 80vh;
     `}>
       <h1>Pokedex</h1>
       <Search 
