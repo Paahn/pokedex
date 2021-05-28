@@ -11,6 +11,7 @@ const App = () => {
   const [inputPokemon, setInputPokemon] = useState('');
   const [searching, setSearching] = useState(false);
   const [searchErrors, setSearchErrors] = useState(false);
+  const [wildPokemon, setWildPokemon] = useState([]);
 
   const getPokemon = async () => {
     const url = `https://pokeapi.co/api/v2/pokemon/${inputPokemon.toLowerCase()}`;
@@ -46,6 +47,21 @@ const App = () => {
     }
   }, [debouncedSearchPokemon]);
 
+  const findWildPokemon = () => {
+    let wildIDs = [];
+    const min = 1;
+    const max = 151;
+    for (let i = 0; i <= 4; i++){
+      wildIDs.push(Math.floor(min + Math.random() * (max - min)));
+    }
+    setWildPokemon(wildIDs);
+    console.log(`hey, this is that array of random IDs you wanted ${wildIDs}`);
+  }
+
+  useEffect(() => {
+    findWildPokemon();
+  }, [])
+
   return (
     <div className={css`
         margin: auto;
@@ -59,7 +75,7 @@ const App = () => {
       />
       {inputPokemon !== '' 
       ? null
-      : <Safari />}
+      : <Safari wildPokemon={wildPokemon} />}
       {searching && <p>Searching...</p>}
       {searchErrors ? <p>Not found!</p> : null}
       <Pokemon
