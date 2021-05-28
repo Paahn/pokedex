@@ -15,7 +15,7 @@ const Safari = ( {wildPokemon }) => {
         `}>
             {wildPokemon.map((poke) => 
                 <div className={css`
-                    align-self: ${poke % 2 === 0 ? 'flex-end' : 'center'}
+                    align-self: ${poke % 2 === 0 ? 'flex-end' : 'center'};
                 `}>
                   <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`}
                     ></img>  
