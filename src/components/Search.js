@@ -9,7 +9,7 @@ const Search = ({ inputPokemon, setInputPokemon }) => {
             <input
              value={inputPokemon}
              onChange={searchPokemon}
-             placeholder="Search Pokemon"
+             placeholder="Search Pokémon"
             ></input>
         </div>
     )
