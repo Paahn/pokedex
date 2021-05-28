@@ -65,12 +65,12 @@ const App = () => {
   return (
     <div className={css`
         margin: auto;
-        width: 80%;
+        width: 60%;
         text-align: center;
         background-color: #ff4d4d;
         padding: 50px;
         border-radius: 10px;
-        height: 80vh;
+        height: 100vh;
         font-family: "pokemon-font", monospace;
     `}>
       <h1 className={css`

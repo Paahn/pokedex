@@ -26,4 +26,4 @@ const Safari = ( {wildPokemon }) => {
     )
 }
 
-export default Safari
+export default Safari;

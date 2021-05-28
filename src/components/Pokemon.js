@@ -27,7 +27,7 @@ const Pokemon = ({ pokemon }) => {
             background-color: #c2d6d6;
             padding: 5px;
             border-radius: 5px;
-            height: 54vh;
+            height: 58vh;
             margin-top: 10px;
         `}
         >
