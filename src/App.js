@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 import Pokemon from './components/Pokemon';
 import Search from './components/Search';
 import useDebounce from './utils/debounceHook';
+import Safari from './components/Safari';
 
 
 const App = () => {
@@ -58,7 +59,7 @@ const App = () => {
       />
       {inputPokemon !== '' 
       ? null
-      : <p>Pokemon search results will appear here</p>}
+      : <Safari />}
       {searching && <p>Searching...</p>}
       {searchErrors ? <p>Not found!</p> : null}
       <Pokemon
