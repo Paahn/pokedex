@@ -14,6 +14,11 @@ const Pokemon = ({ pokemon }) => {
         <div className={css`
             margin: auto;
             width: 100%;
+            background-color: #c2d6d6;
+            padding: 5px;
+            border-radius: 5px;
+            height: 54vh;
+            margin-top: 10px;
         `}
         >
               {
