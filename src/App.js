@@ -71,6 +71,7 @@ const App = () => {
         padding: 50px;
         border-radius: 10px;
         height: 80vh;
+        font-family: "pokemon-font", monospace;
     `}>
       <h1>Pokedex</h1>
       <Search 
