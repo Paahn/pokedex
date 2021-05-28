@@ -9,10 +9,18 @@ const Safari = ( {wildPokemon }) => {
             width: 100%;
             height: 50vh; 
             border-radius: 5px;
-            margin-top: 10px;   
+            margin-top: 10px; 
+            display: flex;
+            justify-content: space-between;  
         `}>
             {wildPokemon.map((poke) => 
-            <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`}></img>
+                <div className={css`
+                    align-self: ${poke % 2 === 0 ? 'flex-end' : 'center'}
+                `}>
+                  <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${poke}.png`}
+                    ></img>  
+                </div>
+                
             )}
         </div>
     )
