@@ -8354,6 +8354,13 @@
   "resolved" "https://registry.npmjs.org/pokemon-font/-/pokemon-font-1.8.1.tgz"
   "version" "1.8.1"
 
+"pokemon@^2.0.2":
+  "integrity" "sha512-lKfv+uUYOut9gO2w21/Nau+aIFF8JIUiuLXAymr09j+ie8oiUOoV2rqX8LhLFWppcz4lEnPNPV5wGPWla0x0wQ=="
+  "resolved" "https://registry.npmjs.org/pokemon/-/pokemon-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "unique-random-array" "^2.0.0"
+
 "portfinder@^1.0.26":
   "integrity" "sha512-Se+2isanIcEqf2XMHjyUKskczxbPH7dQnlMjXX6+dybayyHvAf/TCgyMRlzf/B6QDhAEFOGes0pzRo3by4AbMA=="
   "resolved" "https://registry.npmjs.org/portfinder/-/portfinder-1.0.28.tgz"
@@ -11182,6 +11189,18 @@
   "version" "1.1.1"
   dependencies:
     "unique-slug" "^2.0.0"
+
+"unique-random-array@^2.0.0":
+  "integrity" "sha512-xR87O95fZ7hljw84J8r1YDXrvffPLWN513BNOP4Bv0KcgG5dyEUrHwsvP7mVAOKg4Y80uqRbpUk0GKr8il70qg=="
+  "resolved" "https://registry.npmjs.org/unique-random-array/-/unique-random-array-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "unique-random" "^2.1.0"
+
+"unique-random@^2.1.0":
+  "integrity" "sha512-iQ1ZgWac3b8YxGThecQFRQiqgk6xFERRwHZIWeVVsqlbmgCRl0PY13R4mUkodNgctmg5b5odG1nyW/IbOxQTqg=="
+  "resolved" "https://registry.npmjs.org/unique-random/-/unique-random-2.1.0.tgz"
+  "version" "2.1.0"
 
 "unique-slug@^2.0.0":
   "integrity" "sha512-zoWr9ObaxALD3DOPfjPSqxt4fnZiWblxHIgeWqW8x7UqDzEtHEQLzji2cuJYQFCU6KmoJikOYAZlrTHHebjx2w=="
