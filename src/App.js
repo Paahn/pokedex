@@ -79,13 +79,12 @@ const App = () => {
         setInputPokemon={setInputPokemon} 
       />
       {inputPokemon !== '' 
-      ? null
+      ? <Pokemon
+          pokemon={pokemon}
+        />
       : <Safari wildPokemon={wildPokemon} />}
       {searching && <p>Searching...</p>}
       {searchErrors ? <p>Not found!</p> : null}
-      <Pokemon
-        pokemon={pokemon}
-      />
     </div>
   );
 }
